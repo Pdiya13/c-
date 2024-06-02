@@ -35,6 +35,9 @@ int main()
             r++;
         }
     }
-    
+    if(r==m||c<0)
+    {
+        cout<<"Entered element do not exist in array.";
+    }
     return 0;
 }
