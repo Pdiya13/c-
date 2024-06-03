@@ -3,7 +3,7 @@
 
 using namespace std;
 
-bool pal(char str[],int n)
+bool pal(string str,int n)
 {
     int s=0;
     int e=n-1;
@@ -19,10 +19,11 @@ bool pal(char str[],int n)
 
 int main()
 {
-    char str[50];
+    string str;
     cout << "Enter a string: ";
-    cin>>str;
-    int len = strlen(str);
+    getline(cin,str); //use this
+    // cin>>str; not this because its removes white spaces
+    int len = str.size();
 
     int i=pal(str,len);
     if(i==1)
