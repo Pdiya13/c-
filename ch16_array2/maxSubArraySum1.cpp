@@ -1,6 +1,5 @@
 //maxSubArray sum by slightly optimized method
 
-
 #include <iostream>
 
 using namespace std;
