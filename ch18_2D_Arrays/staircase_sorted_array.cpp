@@ -1,3 +1,7 @@
+//sorted matrix is when your array is sorted row wise as well as collum wise 
+//must need to enter sorted matrix to get correct result
+// time complexity is minimum : o(log(n))
+
 #include <iostream>
 
 using namespace std;
