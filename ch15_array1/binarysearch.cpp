@@ -45,6 +45,8 @@ int main()
     int n;
     cout<<"enter size of an array:"<<endl;
     cin >> n;
+
+    cout<<"enter array elements:";
     
     int *ptr=new int[n];
     for(int i=0;i<n;i++)

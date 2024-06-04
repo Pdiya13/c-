@@ -28,8 +28,9 @@ int main()
         int s=0;
         int e=n-1;
         int m=(s+e)/2;
-        while(s<e)
+        while(s<=e)
         {
+            m=(s+e)/2;
             if(x==a[i][m])
             {
                 cout<<"element found at row "<<i+1<<" and column "<<m+1<<endl;
@@ -43,11 +44,12 @@ int main()
             {
                 s=m+1;
             }
-            s++;
-            e--;
         }
-
-        if(s>=e)
+        if(s<=e)
+        {
+            break;
+        }
+        else
         {
             cout<<"element not found in row "<<i+1<<endl;
         }
