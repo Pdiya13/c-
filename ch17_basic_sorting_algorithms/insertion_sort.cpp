@@ -14,29 +14,29 @@ int main()
         cin>>arr[i];
     }
 
-    for(int i=1;i<n;i++)
-    {
-        for(int j=0;j<i;j++)
-        {
-            if(arr[j]>arr[i])
-            {
-                swap(arr[j],arr[i]);
-            }
-        }
-    }
-
     // for(int i=1;i<n;i++)
     // {
-    //     int current=arr[i];
-    //     int prev=i-1;
-
-    //     while(prev>=0 && arr[prev]>current)
+    //     for(int j=0;j<i;j++)
     //     {
-    //     swap(arr[prev],arr[prev+1]);
-    //     prev--;
+    //         if(arr[j]>arr[i])
+    //         {
+    //             swap(arr[j],arr[i]);
+    //         }
     //     }
-    //     arr[prev+1]=current;
     // }
+
+    for(int i=1;i<n;i++)
+    {
+        int current=arr[i];
+        int prev=i-1;
+
+        while(prev>=0 && arr[prev]>current)
+        {
+        swap(arr[prev],arr[prev+1]);
+        prev--;
+        }
+        arr[prev+1]=current;
+    }
 
     for(int i=0;i<n;i++)
     {
