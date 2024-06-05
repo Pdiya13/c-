@@ -13,7 +13,6 @@ int main()
     {
         cin>>arr[i];
     }
-
     bool isset=false;
     for(int i=0;i<n;i++)
     {
@@ -30,7 +29,6 @@ int main()
             break;
         }  
     }
-
 
     for(int i=0;i<n;i++)
     {
