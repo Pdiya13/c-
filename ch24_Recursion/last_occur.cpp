@@ -10,7 +10,8 @@ int last_occur(vector<int> arr,int i,int key)
         return -1;
     }
 
-    int idxFound=last_occur(arr,i+1,key);
+    int idxFound=0;
+    last_occur(arr,i--,key);
     if(idxFound=-1 && arr[i]==key)
     {
         return i;
@@ -34,10 +35,12 @@ int main()
     cout<<"enter number you want to search:";
     cin>>a;
     int x=last_occur(arr,n-1,a);
-    if(x==0)
+    if(x==-1)
     {
         cout<<"key is not found"<<endl;
     }
+    else
+    cout<<"found on :"<<x;
 
    
     return 0;

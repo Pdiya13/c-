@@ -1,38 +1,34 @@
-#include <iostream>
+#include<iostream>
 
-using namespace std;
+int x = 1;
+
+namespace nspace
+{
+    int x = 2;
+    int y = 3;
+    int z = 4;
+}
 
 int main()
 {
-    int n;
-    cout<<"Enter size of array:";
-    cin>>n;
-
-    int arr[n];
-    for(int i=0;i<n;i++)
-    {
-        cin>>arr[i];
-    }
-    bool isset=false;
-    for(int i=0;i<n;i++)
-    {
-        for(int j=0;j<n-i-1;j++)
-        {
-            if(arr[j]>arr[j+1])
-            {
-                swap(arr[j],arr[j+1]);
-                isset=true;
-            }
-        }
-        if(!isset){
-            cout<<"already sorted !!!";
-            break;
-        }  
-    }
-
-    for(int i=0;i<n;i++)
-    {
-        cout<<arr[i]<<" ";
-    }
+    using namespace nspace;
+    int x=2;
+    int y = 5;
+    
+    //error: reference to ‘x’ is ambiguous
+    std::cout << " " << x;
+    // std::cout << " " << ::x;
+    std::cout << " " << y;
+    //error: ‘::y’ has not been declared
+    // std::cout << " " << ::y;
+    std::cout << " " << z;
+    //error: ‘::z’ has not been declared
+    // std::cout << " " << ::z;
+    // void fun();
+    // fun();
     return 0;
 }
+// void fun()
+// {
+//     std::cout << " " <<  x;
+// }

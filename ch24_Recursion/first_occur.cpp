@@ -7,7 +7,7 @@ int first_occur(vector<int> arr,int i,int key)
 {
     if(i==arr.size())
     {
-        return 0;
+        return -1;
     }
     
     if(arr[i]==key)
